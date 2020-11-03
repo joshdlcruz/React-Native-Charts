@@ -151,6 +151,8 @@ export default (): React.ReactFragment => (
     <IconRegistry icons={EvaIconsPack} />
     <ApplicationProvider {...eva} theme={eva.dark}>
       <Layout style={styles.container}>
+        <SafeAreaView>
+          <ScrollView>
         <Text>Line Chart</Text>
         <LineChart
           data={data}
@@ -213,6 +215,8 @@ export default (): React.ReactFragment => (
           height={220}
           chartConfig={chartConfig}
         />
+        </ScrollView>
+        </SafeAreaView>
       </Layout>
     </ApplicationProvider>
   </>
